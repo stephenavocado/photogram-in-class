@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text } from "react-native";
 import SignIn from "../SignIn/SignIn";
+import Feed from "../Feed/Feed";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 function Navigation() {
@@ -36,7 +37,7 @@ function Navigation() {
 
     return (
         <View>
-            {user ? <Text>Home Screen</Text> : <SignIn setUser={setUser} />}
+            {user ? <Feed user={user} /> : <SignIn setUser={setUser} />}
         </View>
     )
 }
